@@ -1,10 +1,14 @@
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
-import plotly.express as px
+import platform
 temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 
+
+plt = platform.system()
+st.write(plt) #just for degubbing
+if ply=='Linux':
+    pathlib.PosixPath =pathlib.WindowsPath
 
 
 #Title
@@ -12,7 +16,7 @@ st.title("Transport klassifikatsiya qiluvchi model")
 
 #Image uploading
 
-file = st.file_uploader("Rasm yuklash", type = ['png','jpeg','gif','svg'])
+file = st.file_uploader("Rasm yuklash", type = ['png','jpeg','gif','svg','jpg'])
 st.image(file)
 if file:
 
@@ -30,4 +34,8 @@ if file:
     #Plotting
     fig = px.bar(x=probs*100, y = model.dls.vocab)
     st.plotly_chart(fig)
+
+
+
+
 

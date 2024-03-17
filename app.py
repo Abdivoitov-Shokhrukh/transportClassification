@@ -1,9 +1,7 @@
 import streamlit as st
 from fastai.vision.all import *
-import pathlib
 import platform
 temp = pathlib.PosixPath
-pathlib.PosixPath =pathlib.WindowsPath
 
 
 #Title

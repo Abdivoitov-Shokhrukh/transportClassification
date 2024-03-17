@@ -3,12 +3,7 @@ from fastai.vision.all import *
 import pathlib
 import platform
 temp = pathlib.PosixPath
-
-
-plt = platform.system()
-st.write(plt) #just for degubbing
-if ply=='Linux':
-    pathlib.PosixPath =pathlib.WindowsPath
+pathlib.PosixPath =pathlib.WindowsPath
 
 
 #Title

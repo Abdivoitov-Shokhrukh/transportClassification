@@ -1,2 +1,7 @@
 fastai
 plotly
+torch
+tensorflow
+streamlit
+ultralytcis
+opencv-python-contrib-headless
